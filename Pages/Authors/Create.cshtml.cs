@@ -25,7 +25,7 @@ namespace Florea_Iulia_Lab2.Pages.Authors
         }
 
         [BindProperty]
-        public Florea_Iulia_Lab2.Models.Authors Authors{ get; set; } = default!;
+        public Florea_Iulia_Lab2.Models.Authors Authors { get; set; } = default!;
 
         // For more information, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
