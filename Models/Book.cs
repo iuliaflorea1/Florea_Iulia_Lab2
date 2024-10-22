@@ -24,5 +24,8 @@ namespace Florea_Iulia_Lab2.Models
 
         [ForeignKey("AuthorID")]
         public Authors? Author { get; set; }
+
+        //public ICollection<Book> categories { get; set; }
+        //clasele se denumesc la singular, folderele se denumesc la plural
     }
 }

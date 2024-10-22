@@ -16,6 +16,6 @@ namespace Florea_Iulia_Lab2.Models
             }
         }
 
-        public ICollection<Book> Books { get; set; }
+        public ICollection<Book>? Books { get; set; }
     }
 }
