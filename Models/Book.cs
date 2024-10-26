@@ -27,5 +27,7 @@ namespace Florea_Iulia_Lab2.Models
 
         //public ICollection<Book> categories { get; set; }
         //clasele se denumesc la singular, folderele se denumesc la plural
+
+        public ICollection<BookCategory>? BookCategories { get; set; }
     }
 }
