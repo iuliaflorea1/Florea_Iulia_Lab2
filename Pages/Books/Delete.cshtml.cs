@@ -29,7 +29,11 @@ namespace Florea_Iulia_Lab2.Pages.Books
                 return NotFound();
             }
 
-            var book = await _context.Book.FirstOrDefaultAsync(m => m.ID == id);
+            var book = await _context.Book
+                .Include(i => i.Publisher)
+                .Include(i => i.BookCategories)
+                .ThenInclude(i => i.Category)
+                .FirstOrDefaultAsync(s => s.ID == id);
 
             if (book == null)
             {

@@ -31,6 +31,7 @@ namespace Florea_Iulia_Lab2.Pages.Books
             }
 
             Book = await _context.Book
+               .Include(b => b.Author)
                .Include(b => b.Publisher)
                .Include(b => b.BookCategories).ThenInclude(b => b.Category)
                .AsNoTracking()
@@ -44,10 +45,11 @@ namespace Florea_Iulia_Lab2.Pages.Books
             //Book = book;
             //ViewData["PublisherID"] = new SelectList(_context.Set<Publisher>(), "ID","PublisherName");
             //ViewData["AuthorID"] = new SelectList(_context.Set<Florea_Iulia_Lab2.Models.Authors>(), "ID", "AuthorName");
-
-            return Page();
-
             PopulateAssignedCategoryData(_context, Book);
+
+            //return Page();
+
+            
 
             var authorList = _context.Authors.Select(x => new
             {
@@ -72,6 +74,7 @@ selectedCategories)
             }
 
             var bookToUpdate = await _context.Book
+               .Include(b => b.Author)
                .Include(i => i.Publisher)
                .Include(i => i.BookCategories)
                    .ThenInclude(i => i.Category)
