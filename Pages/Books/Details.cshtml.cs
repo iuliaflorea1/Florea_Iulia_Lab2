@@ -30,6 +30,7 @@ namespace Florea_Iulia_Lab2.Pages.Books
             }
 
             var book = await _context.Book
+                .Include(b => b.Author)
                 .Include(i => i.Publisher)
                 .Include(i => i.BookCategories)
                 .ThenInclude(i => i.Category)
