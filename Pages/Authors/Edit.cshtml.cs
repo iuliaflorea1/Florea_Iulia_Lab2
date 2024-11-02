@@ -21,7 +21,7 @@ namespace Florea_Iulia_Lab2.Pages.Authors
         }
 
         [BindProperty]
-        public Florea_Iulia_Lab2.Models.Authors Authors { get; set; } = default!;
+        public Florea_Iulia_Lab2.Models.Author Authors { get; set; } = default!;
         public async Task<IActionResult> OnGetAsync(int? id)
         {
             if (id == null)

@@ -23,7 +23,7 @@ namespace Florea_Iulia_Lab2.Models
         public int? AuthorID { get; set; }// Foreign Key
 
         [ForeignKey("AuthorID")]
-        public Authors? Author { get; set; }
+        public Author? Author { get; set; }
 
         //public ICollection<Book> categories { get; set; }
         //clasele se denumesc la singular, folderele se denumesc la plural

@@ -3,18 +3,21 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Florea_Iulia_Lab2.Models
 {
-    public class Authors
+    public class Author
     {
         public int ID { get; set; }
         public required string FirstName { get; set; }
         public required string LastName { get; set; }
 
-        public string AuthorName {
+        [Display(Name = "Full Name")]
+        public string FullName
+        {
             get
             {
-                return $"{FirstName} {LastName}";
+                return FirstName + " " + LastName;
             }
         }
+
 
         public ICollection<Book>? Books { get; set; }
     }
