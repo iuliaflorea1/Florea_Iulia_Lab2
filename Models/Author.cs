@@ -9,6 +9,7 @@ namespace Florea_Iulia_Lab2.Models
         public required string FirstName { get; set; }
         public required string LastName { get; set; }
 
+
         [Display(Name = "Full Name")]
         public string FullName
         {
