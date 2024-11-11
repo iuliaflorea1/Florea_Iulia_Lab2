@@ -25,11 +25,15 @@ namespace Florea_Iulia_Lab2.Models
         [ForeignKey("AuthorID")]
         public Author? Author { get; set; }
 
+        //public int? BorrowingID { get; set; }
+        //public Borrowing? Borrowing { get; set; }
+
         //public ICollection<Book> categories { get; set; }
         //clasele se denumesc la singular, folderele se denumesc la plural
 
         public ICollection<BookCategory>? BookCategories { get; set; }
+        public ICollection<Borrowing>? Borrowing { get; set; }
 
-       
+
     }
 }
